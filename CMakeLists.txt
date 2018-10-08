@@ -59,6 +59,11 @@ if("${CMAKE_BUILD_TYPE}" STREQUAL "")
     set(CMAKE_BUILD_TYPE "Release")
 endif()
 
+hunter_add_package(mkl)
+if(HUNTER_ENABLED)
+  set(MKLROOT "${MKL_ROOT}")
+endif()
+
 include("cmake/platform.cmake")
 include("cmake/OpenMP.cmake")
 include("cmake/SDL.cmake")
