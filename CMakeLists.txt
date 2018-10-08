@@ -52,7 +52,7 @@ set(PROJECT_VERSION "0.14")
 
 set(LIB_NAME mkldnn)
 
-project(${PROJECT_NAME} C CXX)
+project(${LIB_NAME} C CXX)
 
 if("${CMAKE_BUILD_TYPE}" STREQUAL "")
     message(STATUS "CMAKE_BUILD_TYPE is unset, defaulting to Release")
