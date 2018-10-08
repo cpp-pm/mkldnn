@@ -51,10 +51,10 @@ set(PROJECT_VERSION "0.17.4")
 set(LIB_NAME mkldnn)
 
 if (CMAKE_VERSION VERSION_LESS 3.0)
-    project(${PROJECT_NAME} C CXX)
+    project(${LIB_NAME} C CXX)
 else()
     cmake_policy(SET CMP0048 NEW)
-    project(${PROJECT_NAME} VERSION "${PROJECT_VERSION}" LANGUAGES C CXX)
+    project(${LIB_NAME} VERSION "${PROJECT_VERSION}" LANGUAGES C CXX)
 endif()
 
 if (NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
