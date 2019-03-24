@@ -33,6 +33,9 @@ else()
     set(_omp_severity "FATAL_ERROR")
 endif()
 
+if(APPLE AND CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
+    set(_omp_severity "WARNING")
+endif()
 
 macro(forbid_link_compiler_omp_rt)
     if (NOT WIN32)
